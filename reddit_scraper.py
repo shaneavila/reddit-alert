@@ -1,9 +1,4 @@
-from bs4 import BeautifulSoup
-from ordered_set import OrderedSet
-import requests
-import pandas
 import praw
-
 
 posts = []
 title_set = set()
@@ -13,10 +8,10 @@ subreddit = reddit.subreddit('friends').new(limit=25)
 for post in subreddit:
     if post.title not in title_set:
         title_set.add(post.title)
-        posts.append([post.title, post.subreddit, post.shortlink, post.num_comments])
-posts = pandas.DataFrame(posts, columns=['title', 'subreddit', 'url', '# of comments'])
-reddit.redditor('urmom723').message('TEST',
-                                    '''Column A | Column B | Column C
-                                    ---------|----------|----------
-                                    A1 | B1 | C1
-                                    A2 | B2 | C2''')
+        posts.append([post.title, str(post.subreddit), post.shortlink + " ", str(post.num_comments)])
+format_titles = '|'.join(['title', 'subreddit', 'url', '# of comments\n'])
+format_separation = '|'.join(['-', '-', '-', '-\n'])
+for i in range(len(posts)):
+    posts[i] = '|'.join(posts[i])
+format_table = '\n'.join(posts)
+reddit.redditor('urmom723').message('New Posts', format_titles + format_separation + format_table)
