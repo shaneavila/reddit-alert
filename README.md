@@ -1,7 +1,8 @@
 # Reddit Scraper
 
-A simple post notification system from people you follow on Reddit.
-![alt text](https://i.imgur.com/r4tS5go.png "Reddit Message")
+A simple post notification system from people you follow on Reddit.<br>
+![alt text](https://i.imgur.com/r4tS5go.png "Mobile View")
+![alt text](https://i.imgur.com/FiQQBVI.png "Desktop View")
 
 Usage
 ---
