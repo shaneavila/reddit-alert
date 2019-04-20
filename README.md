@@ -7,8 +7,17 @@ Under create application fill out the details as follows then select create app<
 You should now see the script.<br>
 ![alt text](https://i.imgur.com/uZQpS5B.png "Script")<br>
 RedditScraper is the `user_agent`. Under "personal use script" is the `client_id`. Secret is the `client_secret`.<br>
-In a directory place the `reddit_scraper.py` and `example_praw.ini` files. Rename the `example_praw.ini` to `praw.ini`.
-
+In a directory place the `reddit_scraper.py` and `example_praw.ini` files. Rename the `example_praw.ini` to `praw.ini`.<br>
+Open `praw.ini` and fill out all the fields. `username` and `password` are the username and password for the Reddit account.
+```
+[user]
+user_agent=
+client_id=
+client_secret=
+username=
+password=
+```
+Finally, make sure the PRAW and Pause libraries are installed by using `pip install praw` and `pip install pause`.
 
 ## Desktop View
 ![alt text](https://i.imgur.com/8D4qs5P.png "Desktop View")
