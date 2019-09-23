@@ -29,7 +29,7 @@ for post in subreddit.stream.submissions(pause_after=0):  # Optional parameters:
     # If there are new posts, send message
     if post is None and len(posts) > 0:
         output()
-    # If there aren't any new posts, pause for 8 hours
+    # If there aren't any new posts, pause for 24 hours
     if len(posts) == 0:
-        pause.hours(8)
+        pause.hours(24)
 
