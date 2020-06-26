@@ -1,4 +1,4 @@
-# Reddit Scraper
+# Better Reddit Alerts
 A post notification system that will check if anyone you are following on Reddit has posted within the last 24 hours. If there are any new posts, it will send a message containing all the new posts in a tabular format that is easily readable and compact on both mobile and desktop. The table contains the post title, post author, post subreddit, link to the post, and the number of comments the post has.
 
 # Purpose
